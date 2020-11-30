@@ -1,2 +1,2 @@
 language = "python3"
-run = "python formatif1/zahra.py"
+run = "python input/input.py"
