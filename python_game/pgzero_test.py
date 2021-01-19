@@ -1,11 +1,24 @@
+
 import pgzrun
 
+WIDTH = 600
+HEIGHT = 800
+
+car = Actor("car.png")
+car.pos = (100 , 200)
+
+
 def draw():
-    screen.fill("cyan")
+    screen.clear()
+    car.draw()
 
-pgzrun.go()
+def move_car(car):
+  car.right += 1
+  if car.left > WIDTH:
+    car.right = 0
 
-HEIGHT = 300
+def update():
+  move_car(car)
 
-def draw():
-    screen.fill((128, 0, 0))
+pgzrun.go() 
+
