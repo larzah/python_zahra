@@ -12,10 +12,11 @@ def draw():
     screen.clear()
     car.draw()
 
-def move_car(car):
-  car.right += 1
-  if car.left > WIDTH:
-    car.right = 0
+def update():
+  if keyboard.right:
+    car.x += 1
+  elif keyboard.left:
+   car.x -= 1
 
 def update():
   move_car(car)
